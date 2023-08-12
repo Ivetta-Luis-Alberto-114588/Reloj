@@ -2,14 +2,18 @@ namespace Reloj
 {
     public partial class Form1 : Form
     {
+
+        private TimeZoneService _TimeZoneService;
+        
         public Form1()
         {
             InitializeComponent();
+            _TimeZoneService = new TimeZoneService();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblHora1.Text = DateTime.Now.ToString("hh:mm");
+            lblHora1.Text = DateTime.Now.ToString("HH:mm");
             lblSegundo1.Text = DateTime.Now.ToString("ss");
             lblFecha1.Text = DateTime.Now.ToString("dd MMMM yyyy");
             lblDia1.Text = DateTime.Now.ToString("dddd");
@@ -25,36 +29,33 @@ namespace Reloj
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            var spainTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Romance Standard Time");
-            var espana = TimeZoneInfo.ConvertTime(DateTime.Now, spainTimeZone);
+            var zonaHoraria = _TimeZoneService.obtenerTimeZone("Romance Standard Time");   
 
-            lblHora2.Text = espana.ToString("hh:mm");
-            lblSegundo2.Text = espana.ToString("ss");
-            lblFecha2.Text = espana.ToString("dd MMMM yyyy");
-            lblDia2.Text = espana.ToString("dddd");
+            lblHora2.Text = zonaHoraria.ToString("HH:mm");
+            lblSegundo2.Text = zonaHoraria.ToString("ss");
+            lblFecha2.Text = zonaHoraria.ToString("dd MMMM yyyy");
+            lblDia2.Text = zonaHoraria.ToString("dddd");
 
         }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            var alemaniaTimeZone = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time");
-            var alemania = TimeZoneInfo.ConvertTime(DateTime.Now, alemaniaTimeZone);
+            var zonaHoraria = _TimeZoneService.obtenerTimeZone("W. Europe Standard Time");
 
-            lblHora3.Text = alemania.ToString("hh:mm");
-            lblSegundo3.Text = alemania.ToString("ss");
-            lblFecha3.Text = alemania.ToString("dd MMMM yyyy");
-            lblDia3.Text = alemania.ToString("dddd");
+            lblHora3.Text = zonaHoraria.ToString("HH:mm");
+            lblSegundo3.Text = zonaHoraria.ToString("ss");
+            lblFecha3.Text = zonaHoraria.ToString("dd MMMM yyyy");
+            lblDia3.Text = zonaHoraria.ToString("dddd");
         }
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-            var norwayTimeZone = TimeZoneInfo.FindSystemTimeZoneById("FLE Standard Time");
-            var noruega = TimeZoneInfo.ConvertTime(DateTime.Now, norwayTimeZone);
+            var zonaHoraria = _TimeZoneService.obtenerTimeZone("FLE Standard Time");
 
-            lblHora4.Text = noruega.ToString("hh:mm");
-            lblSegundo4.Text = noruega.ToString("ss");
-            lblFecha4.Text = noruega.ToString("dd MMMM yyyy");
-            lblDia4.Text = noruega.ToString("dddd");
+            lblHora4.Text = zonaHoraria.ToString("HH:mm");
+            lblSegundo4.Text = zonaHoraria.ToString("ss");
+            lblFecha4.Text = zonaHoraria.ToString("dd MMMM yyyy");
+            lblDia4.Text = zonaHoraria.ToString("dddd");
         }
     }
 }

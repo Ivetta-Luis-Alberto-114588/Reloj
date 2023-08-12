@@ -106,7 +106,7 @@
             lblSegundo1.BorderStyle = BorderStyle.FixedSingle;
             lblSegundo1.Font = new Font("DS-Digital", 24F, FontStyle.Regular, GraphicsUnit.Point);
             lblSegundo1.ForeColor = SystemColors.HighlightText;
-            lblSegundo1.Location = new Point(234, 36);
+            lblSegundo1.Location = new Point(220, 34);
             lblSegundo1.Name = "lblSegundo1";
             lblSegundo1.Size = new Size(48, 33);
             lblSegundo1.TabIndex = 2;
@@ -178,7 +178,7 @@
             lblSegundo2.BorderStyle = BorderStyle.FixedSingle;
             lblSegundo2.Font = new Font("DS-Digital", 24F, FontStyle.Regular, GraphicsUnit.Point);
             lblSegundo2.ForeColor = SystemColors.HighlightText;
-            lblSegundo2.Location = new Point(234, 34);
+            lblSegundo2.Location = new Point(220, 34);
             lblSegundo2.Name = "lblSegundo2";
             lblSegundo2.Size = new Size(48, 33);
             lblSegundo2.TabIndex = 2;
@@ -215,7 +215,7 @@
             panel2.Controls.Add(lblSegundo3);
             panel2.Controls.Add(lblHora3);
             panel2.Controls.Add(label6);
-            panel2.Location = new Point(75, 248);
+            panel2.Location = new Point(76, 248);
             panel2.Name = "panel2";
             panel2.Size = new Size(416, 172);
             panel2.TabIndex = 5;
@@ -250,7 +250,7 @@
             lblSegundo3.BorderStyle = BorderStyle.FixedSingle;
             lblSegundo3.Font = new Font("DS-Digital", 24F, FontStyle.Regular, GraphicsUnit.Point);
             lblSegundo3.ForeColor = SystemColors.HighlightText;
-            lblSegundo3.Location = new Point(234, 34);
+            lblSegundo3.Location = new Point(219, 34);
             lblSegundo3.Name = "lblSegundo3";
             lblSegundo3.Size = new Size(48, 33);
             lblSegundo3.TabIndex = 2;
@@ -322,7 +322,7 @@
             lblSegundo4.BorderStyle = BorderStyle.FixedSingle;
             lblSegundo4.Font = new Font("DS-Digital", 24F, FontStyle.Regular, GraphicsUnit.Point);
             lblSegundo4.ForeColor = SystemColors.HighlightText;
-            lblSegundo4.Location = new Point(234, 34);
+            lblSegundo4.Location = new Point(220, 34);
             lblSegundo4.Name = "lblSegundo4";
             lblSegundo4.Size = new Size(48, 33);
             lblSegundo4.TabIndex = 2;
@@ -347,9 +347,9 @@
             label7.ForeColor = SystemColors.HighlightText;
             label7.Location = new Point(162, 0);
             label7.Name = "label7";
-            label7.Size = new Size(71, 21);
+            label7.Size = new Size(73, 21);
             label7.TabIndex = 0;
-            label7.Text = "Noruega";
+            label7.Text = "Finlandia";
             // 
             // timer1
             // 
